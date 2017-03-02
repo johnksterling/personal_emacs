@@ -95,3 +95,11 @@
 
 (display-time-mode 1)
 (setq display-time-default-load-average nil)
+(persistent-scratch-setup-default)
+(setq initial-buffer-choice "~/sterling/log.org")
+(end-of-buffer)
+(defun run-python-once ()
+  (remove-hook 'python-mode-hook 'run-python-once)
+  (run-python (python-shell-parse-command)))
+
+(add-hook 'python-mode-hook 'run-python-once)
