@@ -92,10 +92,12 @@
 (setq diff-switches "-u")
 
 (setq sort-fold-case t)
-
+(setq flycheck-flake8-maximum-line-length 120)
 (display-time-mode 1)
 (setq display-time-default-load-average nil)
-(persistent-scratch-setup-default)
+;;(persistent-scratch-setup-default)
+(setq org-todo-keywords
+      '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
 (setq initial-buffer-choice "~/sterling/log.org")
 (end-of-buffer)
 (defun run-python-once ()
